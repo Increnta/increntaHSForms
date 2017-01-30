@@ -30,4 +30,4 @@ increntaForm Options:
     target =(string)[Recommended] CSS Selector
     formReady = (function) Function to execute when hubspot form get ready
     onSend = (function) Function to execute before send the data to Hubspot
-    this.getRedirect = (function) Return url to redirect
+    getRedirect = (function) Return url to redirect
