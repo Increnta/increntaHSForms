@@ -10,7 +10,7 @@ var increntaForm = (function(window){
       this.target = options.target || null;
       this.formReady = options.formReady || function(form){};
       this.onSend = options.onSend || function(form){};
-      this.getRedirect = options.getRedirect || function(form){ return 'http://someURL.com'; };
+      this.getRedirect = options.getRedirect || function(form){ return null};
 
       this.init();
     };
@@ -60,7 +60,9 @@ var increntaForm = (function(window){
 
     increntaForm.prototype.sendForm = function(form){
       this.onSend(form);
-      this.calculareRedirect(form);
+
+        if(this.getRedirect)
+            this.calculareRedirect(form);
     };
 
     return increntaForm;
